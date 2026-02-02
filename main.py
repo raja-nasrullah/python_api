@@ -123,3 +123,9 @@ def update_student(id: int, student: Student):
     finally:
         cursor.close()
         conn.close()
+
+
+# File ke bilkul aakhir mein ye add kar dein agar nahi hai
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
